@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- setting language a eng to help the browser refine eng related articles -->
+<head>
+  <meta charset="UTF-8">
+  <!-- used for encoding -->
+  <title>Pizza Order Form</title>
+  <!-- this give a title to the page in the tabs  -->
+  <style>
+    body {
+      background-color: #FCE4D6;
+      /* thisgives the background color */
+    }
+  </style>
+  <link rel="icon" type="image/png" href="images/Pizza.png">
+  <!-- to add logo for website -->
+</head>
+<body >
+  
+  <header>
+    <h1>Pizza Order Form</h1>
+    <!--heading of the page  -->
+  </header>
+
+  <main >
+    <form>
+      <!-- using forms to use features such as radio input checkboxes and more -->
+      <fieldset>
+        <!-- this gives a visual container -->
+        <legend>Contact Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <!-- first labelling and then getting input in text -->
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <!-- first labelling and then getting input in email -->
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <!-- first labelling and then getting input in phone number -->
+      </fieldset>
+
+      <fieldset>
+        <!-- this gives a visual container -->
+        <legend>Pizza Details</legend>
+        <!-- this gives a name to the visual container -->
+        <label for="number">Number of Pizzas:</label>
+        <input type="number" id="number" name="number" min="1" max="100" required>
+         <!-- first labelling and then getting input in number -->
+
+         <!-- SLICES -->
+        <label for="slice">Pizza Slices:</label>
+        <select id="slice" name="slice" required>
+          <option value="4">4</option>
+          <option value="6">6</option>
+          <option value="8" selected>8</option>
+          <option value="12">12</option>
+        </select>
+        <!-- giving options to the user to chooose from any one -->
+
+        <!-- SIZE -->
+        <label for="size">Size:</label>
+        <div>
+          <input type="radio" id="small" name="size" value="small" required>
+          <label for="small">
+            <img src="images/Pizza.png" alt="Small" width="45" height="45">
+          </label>
+          <input type="radio" id="medium" name="size" value="medium">
+          <label for="medium">
+            <img src="images/Pizza.png" alt="Medium" width="55" height="55">
+          </label>
+          <input type="radio" id="large" name="size" value="large">
+          <label for="large">
+            <img src="images/Pizza.png" alt="Large" width="65" height="65">
+          </label>
+        </div>
+        <!-- displaying 3 different sized images of pizza S,M,L -->
+
+        <!-- SHAPE -->
+        <div>
+          <label>Shape:</label>
+          <input type="radio" id="round" name="shape" value="round" required>
+          <label for="round">Round</label s>
+          <input type="radio" id="square" name="shape" value="square">
+          <label for="square">Square</label>
+        </div>
+        <!-- giving 2 options for choosing shape of the pizza -->
+
+        <!-- CRUSTS -->
+        <div>
+          <label>Crust:</label>
+          <input type="radio" id="thin-crust" name="crust" value="thin-crust">
+          <label for="thin-crust">Thin Crust</label>
+          <input type="radio" id="thick-crust" name="crust" value="thick-crust">
+          <label for="thick-crust">Thick Crust</label>
+          <input type="radio" id="deep-dish" name="crust" value="deep-dish" required>
+          <label for="deep-dish">Deep Dish</label>
+          <input type="radio" id="stuffed-crust" name="crust" value="stuffed-crust">
+          <label for="stuffed-crust">Stuffed Crust</label>
+        </div>
+        <!-- user can choose any one of 4 base options -->
+
+        <!-- TOPPINGS -->
+        <div>
+          <label>Toppings:</label>
+          <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+          <label for="pepperoni">Pepperoni</label>
+          <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+          <label for="mushrooms">Mushrooms</label>
+          <input type="checkbox" id="olives" name="toppings" value="olives">
+          <label for="olives">Olives</label>
+          <input type="checkbox" id="Pineapple" name="toppings" value="Pineapple">
+          <label for="Pineapple">Pineapple</label>
+          <input type="checkbox" id="Bell Peppers" name="toppings" value="Bell Peppers">
+          <label for="Bell Peppers">Bell Peppers</label>
+        </div>
+        <!-- different options for choosing toppings with checkbox input -->
+      </fieldset>
+      <!-- the visual container box ends here -->
+
+      <fieldset>
+        <!-- new container box started -->
+        <legend>Order Options</legend>
+        <label>Service:</label>
+        <input type="radio" id="take-out" name="service" value="take-out" required>
+        <label for="take-out">Take Out</label>
+        <input type="radio" id="delivery" name="service" value="delivery">
+        <label for="delivery">Delivery</label>
+        <input type="radio" id="fast delivery" name="service" value="fast delivery">
+        <label for="fast delivery">Fast Delivery(+2$)</label>
+        <input type="radio" id="eat-in" name="service" value="eat-in">
+        <label for="eat-in">Eat In</label>
+        <!-- in this a bunch of options have been provided for delivery methods -->
+
+        <!-- PAYMENTS -->
+        <div>
+          <label for="payment">Payment via:</label>
+          <select id="payment" name="payment" required>
+            <option value="Cash" selected>Cash</option>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Debit card">Debit card</option>
+            <option value="Online Banking">Online Banking</option>
+          </select>
+        </div>
+        <!-- user will get a drop down menu in which only one option can be selected -->
+
+        <!-- ADDRESS -->
+        <div>
+          <label for="address">Address (optional):</label>
+          <input type="text" id="address" name="address">
+        </div>
+        <!-- for filling address via text input -->
+
+        <div>
+          <label for="notes">Additional Notes:</label>
+          <div>
+            <textarea id="notes" name="notes" rows="4" cols="50" placeholder="Order related notes..."></textarea>
+          </div>
+          <!-- if a person wants to specify some notes then it csn be added in the box below additional information in the page -->
+        </div>
+      </fieldset>
+
+      <button type="submit" style="background-color: #FCBE85;">Place Order</button>
+      <button type="reset">Reset Form</button>
+      <!-- made 2 buttons one for reset and one for aubmit  -->
+    </form>
+    <!-- the form tag ends here mean swe wont be ablue use form features sfter it -->
+  </main>
+
+  <footer>
+    <p>Get the best</p>
+    <p>Contact us: imaginarypizzaslice.com</p>
+  </footer>
+  <!-- this part is at the bottom of the site this can include informations commonly like contact us, support us or soe quotes -->
+  <img src="images/Pizzat.png" alt="Image" width="600" height="600" style="position: fixed; top: 0; right: 0; opacity: 0.45;">
+  <!-- added and image in the background to make the website look more appealing -->
+</body>
+</html>
